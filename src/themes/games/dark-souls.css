@@ -1,0 +1,76 @@
+/* ─────────────────────────────────────────────────────────────────────────────
+   Dark Souls Remastered — game theme
+   Identity: bleak, atmospheric, premium, minimal.
+   Palette: black / charcoal / white / silver / muted ash, with strictly
+   limited terracotta-ember accents reserved for cinematic moments.
+   The display font (EB Garamond) is loaded by the platform stylesheet.
+   ──────────────────────────────────────────────────────────────────────────── */
+
+[data-game-theme="dark-souls"] {
+	/* ── Surfaces — slightly cooler / blacker than platform default ──── */
+	--pf-bg-base:       #07080b;
+	--pf-bg-1:          #0d0f14;
+	--pf-bg-2:          #14161c;
+	--pf-bg-3:          #1a1d24;
+	--pf-bg-4:          #232730;
+	--pf-border:        #232730;
+	--pf-border-strong: #3a4050;
+
+	--pf-text-strong:   #f1f1ef;   /* polished bone */
+	--pf-text:          #c8cad0;   /* parchment */
+	--pf-text-muted:    #8a8d96;
+	--pf-text-dim:      #5a5d66;
+
+	/* ── Accent palette ───────────────────────────────────────────────── */
+	--game-accent:        #c8cad0;   /* brushed steel / silver */
+	--game-accent-soft:   #4a4e58;   /* dim steel for borders & rails */
+	--game-accent-strong: #f1f1ef;   /* polished bone for headlines */
+
+	--game-secondary:      #9a8a6c;   /* muted ash gold — Optional badge */
+	--game-secondary-soft: #4a4233;
+
+	/* Ember — used SPARINGLY: hero glow, completion banner, bonfire cue */
+	--game-ember:        #c2724a;
+	--game-ember-glow:   rgba(194, 114, 74, 0.18);
+	--game-ember-soft:   rgba(194, 114, 74, 0.45);
+
+	/* ── Typography ───────────────────────────────────────────────────── */
+	--game-display-font: 'EB Garamond', Georgia, serif;
+	--game-body-font:    'EB Garamond', Georgia, serif;
+
+	/* ── Hero / atmosphere ────────────────────────────────────────────── */
+	/* image is set inline by GameHero from the imported asset URL */
+	--game-hero-position:    50% 32%;   /* keep helmet & extended hand in frame */
+	--game-hero-position-sm: 50% 22%;   /* tighter on mobile, knight stays focal */
+
+	--game-hero-overlay: linear-gradient(
+		180deg,
+		rgba(7, 8, 11, 0.30)  0%,
+		rgba(7, 8, 11, 0.05) 30%,
+		rgba(7, 8, 11, 0.10) 50%,
+		rgba(7, 8, 11, 0.65) 80%,
+		rgba(7, 8, 11, 0.98) 100%
+	);
+
+	/* very faint amber wash bleeding from the hero into the page below */
+	--game-page-tint: radial-gradient(
+		ellipse 80% 40% at 50% 0%,
+		rgba(194, 114, 74, 0.05) 0%,
+		transparent 65%
+	);
+
+	/* subtle vignette around content panels for cohesion with hero */
+	--game-content-vignette: radial-gradient(
+		ellipse at 50% 0%,
+		rgba(20, 22, 28, 0.0) 0%,
+		rgba(7, 8, 11, 0.6) 90%
+	);
+}
+
+/* ─── Game-scoped tweaks for shared components ───────────────────────────── */
+
+/* Body copy & headings inside the Dark Souls theme use the serif face. */
+[data-game-theme="dark-souls"] body,
+[data-game-theme="dark-souls"] {
+	font-family: var(--game-body-font);
+}

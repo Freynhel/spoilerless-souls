@@ -189,6 +189,15 @@ const BASE_BOSSES = [
 		progressionIndex: 8,
 		guide: "The most infamous boss in the game. From the Anor Londo bonfire, carefully cross the rafters past the two silver knight archers — kill them first to save your sanity. Enter the cathedral via the front doors and proceed to the fog gate at the far end. Both bosses fight simultaneously. Summon Solaire if available — focus Ornstein first for the safer power-up, or Smough first for a more nimble super form.",
 	},
+	// Stage 8 optional — hidden tomb beneath the cathedral, accessible after Ornstein & Smough
+	{
+		id: 22,
+		name: "Dark Sun Gwyndolin",
+		area: "Anor Londo",
+		isOptional: true,
+		progressionIndex: 8,
+		guide: "After defeating Ornstein and Smough, ascend to the cathedral chamber where you receive the Lordvessel. A concealed staircase descends from there into the Darkmoon Tomb — a long, narrow corridor lit by stained glass. Gwyndolin floats at the far end and retreats deeper down the hall after each wound, so chase relentlessly. He attacks almost exclusively at range with homing soul masses and magic arrows — sprint forward to close the gap and stay aggressive, as he is fragile in melee. A fast bow works equally well from afar.",
+	},
 	{
 		id: 15,
 		name: "Demon Firesage",
